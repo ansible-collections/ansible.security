@@ -1,23 +1,20 @@
-# See https://docs.ansible.com/ansible/latest/dev_guide/collections_galaxy_meta.html
-
-namespace: community
-name: FIXME
-version: 0.1.0
-readme: README.md
+---
 authors:
-  - YOUR NAME (github.com/YOURGITHUB)
-description: null
+  - Ansible Security Community (ansible-security)
+dependencies:
+  "ansible.netcommon": '*'
+  "ansible.utils": '*'
+  "cisco.asa": '*'
+  "ibm.qradar": '*'
+  "splunk.es": '*'
+  "trendmicro.deepsec": '*'
 license_file: LICENSE
-tags:
-# tags so people can search for collections https://galaxy.ansible.com/search
-# tags are all lower-case, no spaces, no dashes.
-  - example1
-  - example2
-repository: https://github.com/ansible-collections/community.REPO_NAME
-#documentation: https://github.com/ansible-collection-migration/community.REPO_NAME/tree/main/docs
-homepage: https://github.com/ansible-collections/community.REPO_NAME
-issues: https://github.com/ansible-collections/community.REPO_NAME/issues
-build_ignore:
-# https://docs.ansible.com/ansible/devel/dev_guide/developing_collections.html#ignoring-files-and-folders
-  - .gitignore
-  - changelogs/.plugin-cache.yaml
+name: security
+description: Ansible Security meta Collection to install all security supported content.
+namespace: ansible
+readme: README.md
+repository: https://github.com/ansible-collections/ansible.security
+tags: [networking, security, cloud, network_cli, httpapi]
+# NOTE(pabelanger): We create an empty version key to keep ansible-galaxy
+# happy. We dynamically inject version info based on git information.
+version: null
