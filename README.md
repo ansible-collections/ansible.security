@@ -1,41 +1,102 @@
-# collection_template
-You can build a new repository for an Ansible Collection using this template by following [Creating a repository from a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template). This README.md contains recommended headings for your collection README.md, with comments describing what each section should contain. Once you have created your collection repository, delete this paragraph and the title above it from your README.md.
+# Ansible Security Meta Collection.
+[![CI](https://zuul-ci.org/gated.svg)](https://dashboard.zuul.ansible.com/t/ansible/builds?project=ansible-collections%2Fansible.security) <!--[![Codecov](https://img.shields.io/codecov/c/github/ansible-collections/ansible.security)](https://codecov.io/gh/ansible-collections/ansible.security)-->
 
-# Foo Collection
-<!-- Add CI and code coverage badges here. Samples included below. -->
-[![CI](https://github.com/ansible-collections/REPONAMEHERE/workflows/CI/badge.svg?event=push)](https://github.com/ansible-collections/REPONAMEHERE/actions) [![Codecov](https://img.shields.io/codecov/c/github/ansible-collections/REPONAMEHERE)](https://codecov.io/gh/ansible-collections/REPONAMEHERE)
+The Ansible ``ansible.security`` collection is a meta collection that install all the following security supported content collections.
+ ```
+- ansible.netcommon
+- ansible.utils
+- cisco.asa
+- ibm.qradar
+- splunk.es
+- trendmicro.deepsec
+ ```
 
-<!-- Describe the collection and why a user would want to use it. What does the collection do? -->
 
-## Tested with Ansible
+<!--start requires_ansible-->
+## Ansible version compatibility
 
-<!-- List the versions of Ansible the collection has been tested with. Must match what is in galaxy.yml. -->
+This collection has been tested against following Ansible versions: **>=2.9.10**.
 
-## External requirements
+Plugins and modules within a collection may be tested with only specific Ansible versions.
+A collection may contain metadata that identifies these versions.
+PEP440 is the schema used to describe the versions of Ansible.
+<!--end requires_ansible-->
 
-<!-- List any external resources the collection depends on, for example minimum versions of an OS, libraries, or utilities. Do not list other Ansible collections here. -->
+<!--start collection content-->
+<!--end collection content-->
 
-### Supported connections
-<!-- Optional. If your collection supports only specific connection types (such as HTTPAPI, netconf, or others), list them here. -->
+## Installing this collection
 
-## Included content
+You can install the ``ansible.security`` collection with the Ansible Galaxy CLI:
 
-<!-- Galaxy will eventually list the module docs within the UI, but until that is ready, you may need to either describe your plugins etc here, or point to an external docsite to cover that information. -->
+    ansible-galaxy collection install ansible.security
 
+You can also include it in a `requirements.yml` file and install it with `ansible-galaxy collection install -r requirements.yml`, using the format:
+
+```yaml
+---
+collections:
+  - name: ansible.security
+```
 ## Using this collection
 
-<!--Include some quick examples that cover the most common use cases for your collection content. -->
+**NOTE**: For Ansible 2.9, you may not see deprecation warnings when you run your playbooks with this collection. Use this documentation to track when a module is deprecated.
 
-See [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html) for more details.
+### Using ``ansible.security`` meta collection to install supported security content collections with latest available release.
+```
+    (python37) [root@fedora]$ ansible-galaxy collection install ansible.security
+    Process install dependency map
+    Starting collection install process
+    Installing 'ansible.netcommon:2.1.0' to '/home/root/.ansible/collections/ansible_collections/ansible/netcommon'
+    Installing 'ansible.utils:2.2.0' to '/home/root/.ansible/collections/ansible_collections/ansible/utils'
+    Installing 'ansible.security:1.0.0' to '/home/root/.ansible/collections/ansible_collections/ansible/security'
+    Installing 'cisco.asa:2.0.2' to '/home/root/.ansible/collections/ansible_collections/cisco/asa'
+    Installing 'ibm.qradar:1.0.3' to '/home/root/.ansible/collections/ansible_collections/ibm/qradar'
+    Installing 'splunk.es:1.0.2' to '/home/root/.ansible/collections/ansible_collections/splunk/es'
+    Installing 'trendmicro.deepsec:1.0.0' to '/home/root/.ansible/collections/ansible_collections/trendmicro/deepsec'
+```
 
+### List of installed security content collections.**
+```
+    (python37) [root@fedora]$ ansible-galaxy collection list
+    /home/root/.ansible/collections/ansible_collections
+    Collection              Version
+    ----------------------- -------
+    ansible.netcommon       2.1.0
+    ansible.security        1.0.0
+    ansible.utils           2.2.0
+    cisco.asa               2.0.2
+    ibm.qradar              1.0.3
+    splunk.es               1.0.2
+    trendmicro.deepsec      1.0.0
+```
+
+### See Also:
+
+* [Ansible Using collections](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html) for more details.
+
+## Advantage of Using this collection
+  The Ansible ``ansible.security`` meta collection gives a single command to install all supported
+  security content collection dependencies rather than individually listing them.
 ## Contributing to this collection
 
-<!--Describe how the community can contribute to your collection. At a minimum, include how and where users can create issues to report problems or request features for this collection.  List contribution requirements, including preferred workflows and necessary testing, so you can benefit from community PRs. If you are following general Ansible contributor guidelines, you can link to - [Ansible Community Guide](https://docs.ansible.com/ansible/latest/community/index.html). -->
+We welcome community contributions to this collection. If you find problems, please open an issue or create a PR against the [ansible.security collection repository](https://github.com/ansible-collections/ansible.security). See [Contributing to Ansible-maintained collections](https://docs.ansible.com/ansible/devel/community/contributing_maintained_collections.html#contributing-maintained-collections) for complete details.
+
+You can also join us on:
+
+- Freenode IRC - ``#ansible-security`` Freenode channel
+- Slack - https://ansiblenetwork.slack.com
+
+See the [Ansible Community Guide](https://docs.ansible.com/ansible/latest/community/index.html) for details on contributing to Ansible.
+
+### Code of Conduct
+This collection follows the Ansible project's
+[Code of Conduct](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html).
+Please read and familiarize yourself with this document.
 
 
 ## Release notes
-
-See the [changelog](https://github.com/ansible-collections/REPONAMEHERE/tree/main/CHANGELOG.rst).
+<!--Add a link to a changelog.md file or an external docsite to cover this information. -->
 
 ## Roadmap
 
@@ -43,19 +104,12 @@ See the [changelog](https://github.com/ansible-collections/REPONAMEHERE/tree/mai
 
 ## More information
 
-<!-- List out where the user can find additional information, such as working group meeting times, slack/IRC channels, or documentation for the product this collection automates. At a minimum, link to: -->
-
 - [Ansible Collection overview](https://github.com/ansible-collections/overview)
 - [Ansible User guide](https://docs.ansible.com/ansible/latest/user_guide/index.html)
 - [Ansible Developer guide](https://docs.ansible.com/ansible/latest/dev_guide/index.html)
-- [Ansible Collections Checklist](https://github.com/ansible-collections/overview/blob/master/collection_requirements.rst)
 - [Ansible Community code of conduct](https://docs.ansible.com/ansible/latest/community/code_of_conduct.html)
-- [The Bullhorn (the Ansible Contributor newsletter)](https://us19.campaign-archive.com/home/?u=56d874e027110e35dea0e03c1&id=d6635f5420)
-- [Changes impacting Contributors](https://github.com/ansible-collections/overview/issues/45)
 
 ## Licensing
-
-<!-- Include the appropriate license information here and a pointer to the full licensing details. If the collection contains modules migrated from the ansible/ansible repo, you must use the same license that existed in the ansible/ansible repo. See the GNU license example below. -->
 
 GNU General Public License v3.0 or later.
 
