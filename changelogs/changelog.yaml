@@ -1,7 +1,4 @@
 ancestor: null
 releases:
   1.0.0:
-    changes:
-      release_summary:
-      - Updated README.md and generated documentation.
-    release_date: '2021-06-18'
+    release_date: '2021-06-24'
