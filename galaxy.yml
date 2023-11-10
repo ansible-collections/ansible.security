@@ -17,4 +17,4 @@ repository: https://github.com/ansible-collections/ansible.security
 tags: [networking, security, cloud, network_cli, httpapi]
 # NOTE(pabelanger): We create an empty version key to keep ansible-galaxy
 # happy. We dynamically inject version info based on git information.
-version: 1.1.1
+version: 1.1.0
