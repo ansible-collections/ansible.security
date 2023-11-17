@@ -2,11 +2,10 @@ ancestor: null
 releases:
   1.0.0:
     changes:
-      release_summary:
-      - Updated README.md and generated documentation.
-    release_date: '2021-06-18'
+      release_summary: Updated README.md and generated documentation.
+    release_date: "2021-06-18"
   1.1.0:
     changes:
       trivial:
-      - Updated Ansible required version under meta runtime.
-    release_date: '2022-11-18'
+        - Updated Ansible required version under meta runtime.
+    release_date: "2022-11-18"
