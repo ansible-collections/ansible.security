@@ -4,7 +4,7 @@ Ansible Security Collection Release Notes
 
 .. contents:: Topics
 
-v1.1.1-dev
+v1.1.1
 ==========
 
 Release Summary

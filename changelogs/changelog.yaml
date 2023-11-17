@@ -9,8 +9,7 @@ releases:
       trivial:
       - Updated Ansible required version under meta runtime.
     release_date: '2022-11-18'
-  1.1.1-dev:
+  1.1.1:
     changes:
-      release_summary:
-      - Enable GHA workflow and fix ansible-lint issue.
+      release_summary: Enable GHA workflow and fix ansible-lint issue.
     release_date: '2023-11-17'
