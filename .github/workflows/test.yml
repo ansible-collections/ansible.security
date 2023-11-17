@@ -25,11 +25,13 @@ jobs:
     if: ${{ always() && (github.event_name != 'schedule') }}
     needs:
       - changelog
+      - sanity
       - ansible-lint
     runs-on: ubuntu-latest
     steps:
       - run: >-
           python -c "assert set([
           '${{ needs.changelog.result }}',
+          '${{ needs.sanity.result }}',
           '${{ needs.ansible-lint.result }}',
           ]) == {'success'}"
