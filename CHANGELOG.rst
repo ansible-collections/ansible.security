@@ -4,6 +4,14 @@ Ansible Security Collection Release Notes
 
 .. contents:: Topics
 
+v1.1.1-dev
+==========
+
+Release Summary
+---------------
+
+- Enable GHA workflow and fix ansible-lint issue.
+
 v1.1.0
 ======
 
