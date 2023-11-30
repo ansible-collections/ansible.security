@@ -1,6 +1,6 @@
 # Ansible Security Meta Collection.
 [![CI](https://zuul-ci.org/gated.svg)](https://dashboard.zuul.ansible.com/t/ansible/builds?project=ansible-collections%2Fansible.security) <!--[![Codecov](https://img.shields.io/codecov/c/github/ansible-collections/ansible.security)](https://codecov.io/gh/ansible-collections/ansible.security)-->
-[![CI](https://github.com/ansible-collections/ansible.security/actions/workflows/test.yml/badge.svg?branch=main&event=schedule)](https://github.com/ansible-collections/ansible.security/actions/workflows/test.yml)
+[![CI](https://github.com/ansible-collections/ansible.security/actions/workflows/tests.yml/badge.svg?branch=main&event=schedule)](https://github.com/ansible-collections/ansible.security/actions/workflows/tests.yml)
 
 The Ansible ``ansible.security`` collection is a meta collection that install all the following security supported content collections.
  ```
