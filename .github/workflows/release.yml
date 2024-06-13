@@ -1,7 +1,6 @@
 ---
-name: "Release"
+name: "Release collection"
 on:  # yamllint disable-line rule:truth
-  workflow_dispatch:
   release:
     types: [published]
 
