@@ -7,7 +7,6 @@ The Ansible ``ansible.security`` collection is a meta collection that install al
 - ansible.netcommon
 - ansible.utils
 - cisco.asa
-- ibm.qradar
 - splunk.es
 - trendmicro.deepsec
  ```
@@ -51,7 +50,6 @@ collections:
     Installing 'ansible.utils:2.2.0' to '/home/root/.ansible/collections/ansible_collections/ansible/utils'
     Installing 'ansible.security:1.0.0' to '/home/root/.ansible/collections/ansible_collections/ansible/security'
     Installing 'cisco.asa:2.0.2' to '/home/root/.ansible/collections/ansible_collections/cisco/asa'
-    Installing 'ibm.qradar:1.0.3' to '/home/root/.ansible/collections/ansible_collections/ibm/qradar'
     Installing 'splunk.es:1.0.2' to '/home/root/.ansible/collections/ansible_collections/splunk/es'
     Installing 'trendmicro.deepsec:1.0.0' to '/home/root/.ansible/collections/ansible_collections/trendmicro/deepsec'
 ```
@@ -66,7 +64,6 @@ collections:
     ansible.security        1.0.0
     ansible.utils           2.2.0
     cisco.asa               2.0.2
-    ibm.qradar              1.0.3
     splunk.es               1.0.2
     trendmicro.deepsec      1.0.0
 ```

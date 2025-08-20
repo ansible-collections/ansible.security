@@ -5,7 +5,6 @@ dependencies:
   "ansible.netcommon": "*"
   "ansible.utils": "*"
   "cisco.asa": "*"
-  "ibm.qradar": "*"
   "splunk.es": "*"
   "trendmicro.deepsec": "*"
 license_file: LICENSE
