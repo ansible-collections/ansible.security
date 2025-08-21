@@ -1,8 +1,31 @@
-=========================================
-Ansible Security Collection Release Notes
-=========================================
+==============================================
+Ansible Security Meta Collection Release Notes
+==============================================
 
 .. contents:: Topics
+
+
+v4.0.0
+======
+
+Major Changes
+-------------
+
+- Removing dependencies for deprecated collections ibm.qradar.
+
+v3.0.0
+======
+
+Release Summary
+---------------
+
+With this release, the minimum required version of `ansible-core` for this collection is `2.15.0`. The last version known to be compatible with `ansible-core` versions below `2.15` is v2.0.0.
+
+
+Major Changes
+-------------
+
+- Bumping `requires_ansible` to `>=2.15.0`, since previous ansible-core versions are EoL now.
 
 v2.0.0
 ======
@@ -20,15 +43,10 @@ Major Changes
 v1.1.0
 ======
 
-Release Summary
----------------
-
-- Updated Ansible required version under meta runtime.
-
 v1.0.0
 ======
 
 Release Summary
 ---------------
 
-- Updated README.md and generated documentation.
+Updated README.md and generated documentation.
