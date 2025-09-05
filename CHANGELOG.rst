@@ -5,6 +5,14 @@ Ansible Security Meta Collection Release Notes
 .. contents:: Topics
 
 
+v5.0.0
+======
+
+Major Changes
+-------------
+
+- Remove cisco.asa as it is moved to commmunity from secutiry meta collection.
+
 v4.0.0
 ======
 

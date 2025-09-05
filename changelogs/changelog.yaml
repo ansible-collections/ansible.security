@@ -14,8 +14,7 @@ releases:
       major_changes:
         - Bumping `requires_ansible` to `>=2.14.0`, since previous ansible-core versions
           are EoL now.
-      release_summary:
-        Starting from this release, the minimum `ansible-core` version
+      release_summary: Starting from this release, the minimum `ansible-core` version
         this collection requires is `2.14.0`. That last known version compatible with
         ansible-core<2.14 is `v1.1.0`.
     fragments:
@@ -26,8 +25,7 @@ releases:
       major_changes:
         - Bumping `requires_ansible` to `>=2.15.0`, since previous ansible-core versions
           are EoL now.
-      release_summary:
-        With this release, the minimum required version of `ansible-core`
+      release_summary: With this release, the minimum required version of `ansible-core`
         for this collection is `2.15.0`. The last version known to be compatible with
         `ansible-core` versions below `2.15` is v2.0.0.
     fragments:
@@ -40,3 +38,10 @@ releases:
     fragments:
       - release_4_0_0.yaml
     release_date: '2025-08-20'
+  5.0.0:
+    changes:
+      major_changes:
+        - Remove cisco.asa as it is moved to commmunity from secutiry meta collection.
+    fragments:
+      - remove_asa_collection.yaml
+    release_date: '2025-09-05'
