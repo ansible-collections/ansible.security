@@ -4,7 +4,6 @@ authors:
 dependencies:
   "ansible.netcommon": "*"
   "ansible.utils": "*"
-  "cisco.asa": "*"
   "splunk.es": "*"
   "trendmicro.deepsec": "*"
 license_file: LICENSE
